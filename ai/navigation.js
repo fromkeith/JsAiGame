@@ -75,7 +75,7 @@ define(["geom/geom", "geom/polygon", "geom/quadTree"], function (geometry, Polyg
 	function displaceAllPoints(path) {
 		var i, finalPath = [];
 		finalPath.push(path[0]);
-		for (i = 1; i < path.length-1; i++) {
+		for (i = 1; i < path.length - 1; i++) {
 			if (needsDisplacement(path[i])) {
 				displayAroundCorner(finalPath, path[i], finalPath[finalPath.length - 1]);
 			} else {
