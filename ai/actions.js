@@ -5,12 +5,17 @@ define(["ai/navigation"], function (aiNavigation) {
 	//!!!!!
 	return {
 		patrolAction : {
+			reCalcWait : 0,
 			preconditions : {isAlarmed : false, haveTarget : false, haveGun : true, haveAmmo : true},
 			postconditions : {isAlarmed : true, haveTarget : true},
 			calcCost : function () { return 2; },
 			doAction : function (agent, entity) {
 				if (!entity.hasPath()) {
-					this._findPatrolPath(entity);
+					if (this.reCalcWait <= 0) {
+						this._findPatrolPath(entity);
+						this.reCalcWait = 30;
+					}
+					this.reCalcWait -= 1;
 				}
 				// todo: invalidate the state!
 				return false;

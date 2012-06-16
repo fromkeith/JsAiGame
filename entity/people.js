@@ -91,7 +91,7 @@ define([], function () {
 		_weapons : [],
 		_moved : function (info) {
 			if (this.hit("wall")) {
-				//this.attr({x : info.from.x, y : info.from.y});
+				this.attr({x : info.from.x, y : info.from.y});
 			}
 		},
 		_shot : function (info) {

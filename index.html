@@ -1,14 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<script type="application/javascript" language="javascript" src="crafty.js"></script> 
-		<script type="application/javascript" language="javascript" src="math/sylvester.joined.js"></script>
-		<script type="application/javascript" language="javascript" src="require.js" data-main="game"></script>
+		<script type="text/javascript" language="javascript" src="crafty.js"></script> 
+		<script type="text/javascript" language="javascript" src="math/sylvester.joined.js"></script>
+		<script type="text/javascript" language="javascript" src="require.js" data-main="game"></script>
 	</head>
-	<body>
+	<body style="background:#000; color:#FFF;">
 		<div>
-			<div id="gun"  ></div>
-			<div id="ammo" ></div>
+			<div id="gun"  >&nbsp;</div>
+			<div id="ammo" >&nbsp;</div>
+		</div>
+		<div id="cr-stage"></div>
+		<div style="float:right;font-size:0.7em">
+			This AI currently only:
+			<ul>
+				<li>Walks to random places on the map</li>
+				<li>Smoothes its walking path</li>
+				<li>Avoids walls</li>
+				<li>Barely makes decisions</li>
+			</ul>
+		</div>
+		<div style="font-size:0.7em">
+			This is a prototype AI, that is still under development. For code see <a href="https://github.com/fromkeith/JsAiGame">here</a>
+			<br />
+			This project uses the following opensource libraries:
+			<ul>
+				<li><a href="http://www.craftyjs.com">Crafty</a></li>
+				<li><a href="http://sylvester.jcoglan.com">Sylvester</a></li>
+				<li><a href="http://requirejs.org/">RequireJs</a></li>
+			</ul>
+			And uses assets from:
+			<ul>
+				<li><a href="http://opengameart.org/content/141-military-icons-set">MeteorRepository</a> by <a href="http://www.AngryMeteor.com">AngryMeteor.com</a></li>
+			</ul>
 		</div>
 	</body>
 </html>

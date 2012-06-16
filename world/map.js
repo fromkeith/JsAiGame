@@ -157,7 +157,7 @@ define(["geom/geom", "geom/polygon", "geom/quadTree"], function (geom, Polygon, 
 			}
 			tmpNavPolys = makeNavTree(20, 20, mapDetails.w - 20, mapDetails.h - 20, allPolys);
 			for (i = 0; i < tmpNavPolys.length; i++) {
-				Crafty.e("PolyDrawer").poly(tmpNavPolys[i].points, randomColor())._fill = true;
+				//Crafty.e("PolyDrawer").poly(tmpNavPolys[i].points, randomColor())._fill = true;
 			}
 			navTree = createNavMesh(0, 0, mapDetails.w, mapDetails.h, tmpNavPolys);
 			return {objects : quadTree, nav: navTree};

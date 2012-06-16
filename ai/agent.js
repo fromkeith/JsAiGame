@@ -62,14 +62,15 @@ define(["ai/ai", "ai/actions"], function (ai, aiActions) {
 			if (!this.controller) {
 				return;
 			}
+			this.controller.perceive(this);
 			this.controller.update(this);
-			if (this._path && this._path.length > 0) {
+			/*if (this._path && this._path.length > 0) {
 				this.pp.poly(this._path);
-			}
+			}*/
 		},
 		init : function () {
 			this.bind("EnterFrame", this.enterFrame);
-			this.pp = Crafty.e("PolyDrawer");
+			//this.pp = Crafty.e("PolyDrawer");
 		},
 		setController : function (controller) {
 			this.controller = controller;
